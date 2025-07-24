@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="images/headA.png" type="image/png">
+  <title>Aliades y Colectivos - Pelando la Tuna</title>
+  <style>
+    :root {
+      --bg-light: #f9f4ef;
+      --text-light: #2d1f15;
+      --bg-dark: #121212;
+      --text-dark: #f5f5f5;
+      --accent: #8b2e38;
+      --green: #4d7c0f;
+      --desert: #d6b17c;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--accent);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+      flex-basis: 100%;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 1.5rem;
+      font-size: 1rem;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2, h3, h4 {
+      color: var(--accent);
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    button#darkModeToggle {
+      background: transparent;
+      border: none;
+      font-size: 1.6rem;
+      color: white;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button#darkModeToggle:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: var(--text-light);
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body class="dark">
+  <header>
+    <h1>Aliades y Colectivos</h1>
+    <button id="darkModeToggle" aria-label="Cambiar modo oscuro 🌙">🌙</button>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="aliades.html" class="active">Aliades</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Gracias por sumar tu voz</h2>
+      <p>En <em>Pelando la Tuna</em> creemos en el poder de extender raices, aquí celebramos y reconocemos a quienes caminan con nosotres en esta lucha por visibilidad, justicia y libertad para las cuerpas diversas</p>
+    </section>
+
+    <section>
+      <h3>Colectivos aliados</h3>
+      <ul>
+        <li><strong>Sangre de Tuna</strong> - Somos un espacio para personas sexodiversas de Zacatecas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Organizaciones aliadas</h4>
+      <ul>
+        <li><strong>La Policlínica</strong> - Un espacio interactivo que promueve la creación de comunidad y el acercamiento entre la sociedad y la cultura mediante la colaboración • Sede en Zacatecas Mx • Creado en 2021 •</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>¿Tu colectivo u organizacion quiere aparecer aquí?</h4>
+      <p>Si formas parte de un colectivo, espacio artístico o iniciativa que desea apoyar o colaborar con <em>Pelando la Tuna</em>, escríbenos por redes o mándanos un correo ¡Siempre hay lugar para más tunas en la penca!</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Pelando la Tuna. Proyecto independiente de <strong>Sangre de Tuna</strong>.
+  </footer>
+
+  <script>
+  const toggleBtn = document.getElementById('darkModeToggle');
+
+  // Función para actualizar el ícono del botón
+  function updateToggleIcon() {
+    if (document.body.classList.contains('dark')) {
+      toggleBtn.textContent = '☀️';
+      toggleBtn.setAttribute('aria-label', 'Cambiar a modo claro');
+    } else {
+      toggleBtn.textContent = '🌙';
+      toggleBtn.setAttribute('aria-label', 'Cambiar a modo oscuro');
+    }
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    updateToggleIcon();
+  });
+
+  // Actualiza ícono al cargar
+  updateToggleIcon();
+</script>
+
+</body>
+</html>

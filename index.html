@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pelando la Tuna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="images/head.png" type="image/png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-light: #f9f4ef;
+            --text-light: #2d1f15;
+            --bg-dark: #121212;
+            --text-dark: #f5f5f5;
+            --accent: #8b2e38;
+            --green: #4d7c0f;
+            --desert: #d6b17c;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light-mode {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        header {
+            background-color: var(--accent);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            background-color: var(--green);
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .hero img {
+            max-width: 300px;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--green);
+            margin: 1.5rem 0;
+        }
+
+        .gallery img {
+            width: 30%;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--text-light);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .button-sangre,
+        .form-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: inherit;
+            font-size: 1.5rem;
+        }
+
+        .redes a {
+            color: #555;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .redes a:hover {
+            color: #e91e63;
+        }
+
+        .link-texto {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: #aaa;
+        text-underline-offset: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="document.body.classList.toggle('light-mode')">
+        <i class="fas fa-adjust"></i>
+    </button>
+
+    <header>
+        <div class="hero">
+            <img src="images/logoPLT.png" alt="Logo Pelando La Tuna" />
+            <p>Podcast desde Zacatecas, sembrado por Sangre de Tuna</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#quienes">¿Qué es?</a>
+        <a href="#acciones">Contenido</a>
+        <a href="#invitadxs">Invitadxs</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#elenco">Equipo</a>
+    </nav>
+
+    <section id="quienes">
+        <h2>¿Qué es Pelando la Tuna?</h2>
+        <p><strong>Pelando la Tuna</strong> es un podcast diverso, íntimo y sin filtros que mezcla entrevistas,
+            anécdotas y conversaciones queer desde el corazón del desierto: Zacatecas</p>
+        <p>Es una ramificación del proyecto <strong>Sangre de Tuna</strong>, y está dirigido por <strong>Egael Valle</strong></p>
+
+        <p>Este espacio le da voz a quienes muchas veces solo han sido escuchades en silencio, aquí se habla de
+            identidad, placer, memoria, resistencia, humor y cuerpo, con una mirada tunera y afectiva</p>
+        <p class="quote">“Nos sembraron en la tierra seca, y aún así brotamos en colores que ni el desierto imaginaba”
+        </p>
+    </section>
+
+    <section id="invitadxs">
+        <h2>¿Quiénes han venido?</h2>
+        <p class="quote">“Nos creyeron espinas, pero éramos flor de nopal abriéndose al sol”</p>
+        <p>Desde amigues, activistas, artistas y rebeldes suaves, hasta personas comunes con historias fuera de lo
+            común, cada episodio es un retrato hablado de lo que somos</p>
+    </section>
+
+    <section id="recursos">
+        <h2>Recursos y enlaces</h2>
+        <ul>
+            <li><a href="#" class="link-texto">Guía emocional desde el desierto</a></li>
+            <li><a href="apoyo.html" class="link-texto">Aliades y colectivos</a></li>
+        </ul>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <h2>Galería</h2>
+        <img src="images/primerPost.jpeg" alt="Anuncio de Pelando la Tuna">
+        <img src="images/congreso.jpeg" alt="Congreso de Sangre de Tuna">
+        <img src="images/sizart.jpeg" alt="Invitacion al Sizart">
+    </section>
+
+    <section id="elenco">
+        <h2>Equipo tunero</h2>
+        <ul>
+            <li><a href="egael.html" class="link-texto"><strong>Egael Valle</strong></a> - Dirección, guión y voz principal</li>
+            <li><strong>José Manuel Palma</strong> - Fundador de Sangre de Tuna</li>
+        </ul>
+
+        <a href="https://forms.gle/MHTPzTQeARgJPtEPA" class="form-button" target="_blank">Quiero ser invitadx</a>
+        <p></p>
+        <a href="https://forms.gle/1WpwFdH41Ea1mmhK8" class="form-button" target="_blank">Contar anécdota anónima</a>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/pelandolatuna/" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61577366584449" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" title="Spotify"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.youtube.com/@PelandolaTuna" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@sangredetunazac?_t=ZS-8yHMAIfZrlY&_r=1" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <a href="https://sites.google.com/view/sangredetuna/" class="button-sangre">Ir a Sangre de Tuna 🌵</a>
+    </section>
+
+    <footer>
+        Hecho con espinas, risas y rebeldía. &copy; 2025 Sangre de Tuna
+    </footer>
+</body>
+
+</html>

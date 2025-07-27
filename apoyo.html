@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="images/headA.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/head.png" type="image/png">
   <title>Aliades y Colectivos - Pelando la Tuna</title>
   <style>
     :root {
@@ -91,7 +92,7 @@
     }
 
     button#darkModeToggle:hover {
-      background-color: rgba(255,255,255,0.2);
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     footer {
@@ -104,40 +105,50 @@
     }
   </style>
 </head>
+
 <body class="dark">
   <header>
     <h1>Aliades y Colectivos</h1>
-    <button id="darkModeToggle" aria-label="Cambiar modo oscuro 🌙">🌙</button>
     <nav>
       <a href="index.html">Inicio</a>
-      <a href="aliades.html" class="active">Aliades</a>
     </nav>
   </header>
 
   <main>
     <section>
       <h2>Gracias por sumar tu voz</h2>
-      <p>En <em>Pelando la Tuna</em> creemos en el poder de extender raices, aquí celebramos y reconocemos a quienes caminan con nosotres en esta lucha por visibilidad, justicia y libertad para las cuerpas diversas</p>
+      <p>En <em>Pelando la Tuna</em> creemos en el poder de extender raices, aquí celebramos y reconocemos a quienes
+        caminan con nosotres en esta lucha por visibilidad, justicia y libertad para las cuerpas diversas</p>
     </section>
 
     <section>
       <h3>Colectivos aliados</h3>
       <ul>
-        <p><img src="images/logoSangre.png" alt="Sangre de Tuna Logo" width="50px" height="55px"><strong> Sangre de Tuna</strong> - Somos un espacio para personas sexodiversas de Zacatecas</p>
+        <p><img src="images/logoSangre.png" alt="Sangre de Tuna Logo" width="50px" height="55px"><strong> Sangre de
+            Tuna</strong> - Somos un espacio para personas sexodiversas de Zacatecas</p>
       </ul>
     </section>
 
     <section>
       <h4>Organizaciones aliadas</h4>
       <ul>
-        <p><img src="images/logoPoliclinica.jpg" alt="La Policlínica Logo" width="50px" height="50px" style="border-radius: 50%;"><strong> La Policlínica</strong> - Un espacio interactivo que promueve la creación de comunidad y el acercamiento entre la sociedad y la cultura mediante la colaboración • Sede en Zacatecas Mx • Creado en 2021 •</p>
-        <p><img src="images/logoSpeakLab.jpg" alt="Speak Lab Mx Logo" width="50px" height="50px" style="border-radius: 50%;"><strong> Speak Lab Mx</strong> - 🧪 Somos un laboratorio creativo 💡</p><p>💭Apoyamos la diversidad, el emprendimiento, el talento y los eventos comunitarios</p>
+        <p><img src="images/logoPoliclinica.jpg" alt="La Policlínica Logo" width="50px" height="50px"
+            style="border-radius: 50%;"><strong> La Policlínica</strong> - Un espacio interactivo que promueve la
+          creación de comunidad y el acercamiento entre la sociedad y la cultura mediante la colaboración • Sede en
+          Zacatecas Mx • Creado en 2021 •</p>
+        <p><img src="images/logoSpeakLab.jpg" alt="Speak Lab Mx Logo" width="50px" height="50px"
+            style="border-radius: 50%;"><strong> Speak Lab Mx</strong> - 🧪 Somos un laboratorio creativo 💡</p>
+        <p>💭Apoyamos la diversidad, el emprendimiento, el talento y los eventos comunitarios 🌟</p>
+        <p><img src="images/logoCAPASITS.jpg" alt="CAPASITS Logo" width="50px" height="50px"
+            style="border-radius: 50%;"><strong> CAPASITS</strong> - Centro especializado para la prevención y atención
+          de pacientes con VIH y otras infecciones de transmisión sexual, de manera ambulatoria</p>
       </ul>
     </section>
 
     <section>
       <h4>¿Tu colectivo u organizacion quiere aparecer aquí?</h4>
-      <p>Si formas parte de un colectivo, espacio artístico o iniciativa que desea apoyar o colaborar con <em>Pelando la Tuna</em>, escríbenos por redes o mándanos un correo ¡Siempre hay lugar para más tunas en la penca!</p>
+      <p>Si formas parte de un colectivo, espacio artístico o iniciativa que desea apoyar o colaborar con <em>Pelando la
+          Tuna</em>, escríbenos por redes o mándanos un correo ¡Siempre hay lugar para más tunas en la penca!</p>
     </section>
   </main>
 
@@ -145,28 +156,6 @@
     &copy; 2025 Pelando la Tuna. Proyecto independiente de <strong>Sangre de Tuna</strong>.
   </footer>
 
-  <script>
-  const toggleBtn = document.getElementById('darkModeToggle');
-
-  // Función para actualizar el ícono del botón
-  function updateToggleIcon() {
-    if (document.body.classList.contains('dark')) {
-      toggleBtn.textContent = '☀️';
-      toggleBtn.setAttribute('aria-label', 'Cambiar a modo claro');
-    } else {
-      toggleBtn.textContent = '🌙';
-      toggleBtn.setAttribute('aria-label', 'Cambiar a modo oscuro');
-    }
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    updateToggleIcon();
-  });
-
-  // Actualiza ícono al cargar
-  updateToggleIcon();
-</script>
-
 </body>
+
 </html>

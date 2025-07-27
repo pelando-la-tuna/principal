@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Presentación - ART González</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #1e1e1e;
+            --text-light: #000000;
+            --text-dark: #f1f1f1;
+            --accent: #212aad;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .card {
+            max-width: 600px;
+            margin: auto;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: inherit;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .role {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .toggle-button {
+            margin-top: 2rem;
+            background-color: var(--accent);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <img src="images/perfil.png" alt="Foto de ART González" class="profile-img">
+        <div class="name">ART González</div>
+        <div class="role">Roles Varios</div>
+        <div class="bio">
+            <p>🌟 Marketing | Poesía | 🗣 Host + Speaker ✨</p>
+            <p>📍 Zac - Cdmx - Bogotá</p>
+            <p>Head en la agencia ASEROyGONZALEZ</p>
+            <p>Hago mkt, difundo negocios y escribo poesía #SimioCursi</p>
+            <p>Presidente de SpeakLab.Mx</p>
+            <p>Profe, Host & Speaker</p>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/arturogonzalezsalas" target="_blank" title="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/arturogonzalezsalas.mx" target="_blank" title="facebook"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com/in/dr-arturo-gonz%C3%A1lez-salas-27b41524" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+            <p></p>
+            <a href="https://www.threads.net/@arturogonzalezsalas" target="_blank" title="Tik Tok"><i 
+                    class="fab fa-threads"></i></a>
+            <a href="https://pinterest.com/arturogonzalezsalas/" target="_blank" title="Tik Tok"><i 
+                    class="fab fa-pinterest"></i></a>
+            <a href="https://x.com/artglez" target="_blank" title="X"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <button class="toggle-button" onclick="toggleDarkMode()">Cambiar modo</button>
+    </div>
+</body>
+
+</html>
